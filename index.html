@@ -342,37 +342,47 @@
     </div>
     <!-- Portfolio End -->
 
-    <!-- Contact Start -->
-    <div class="container-fluid py-5" id="contact">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Contact</h1>
-                <h1 class="position-absolute text-uppercase text-primary">Contact Me</h1>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="contact-form text-center">
-                        <div id="success"></div>
-                    
-                        <form action="https://formspree.io/f/mldjnpjy" method="POST">
-                            <label>
-                              Your email:
-                              <input type="email" name="email" required>
-                            </label>
-                            <label>
-                              Your message:
-                              <textarea name="message" required></textarea>
-                            </label>
-                            <!-- your other form fields go here -->
-                            <button type="submit">Send</button>
-                          </form>
-                          
-                    </div>
+<!-- Contact Start -->
+<div class="container-fluid py-5" id="contact">
+    <div class="container">
+        <div class="position-relative d-flex align-items-center justify-content-center">
+            <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Contact</h1>
+            <h1 class="position-absolute text-uppercase text-primary">Contact Me</h1>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="contact-form text-center">
+                    <div id="success"></div>
+                    <form action="https://formspree.io/f/mldjnpjy" method="POST" id="contactForm" novalidate="novalidate">
+                        <div class="form-row">
+                            <div class="control-group col-sm-6">
+                                <input type="text" name="name" class="form-control p-4" placeholder="Your Name" required />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group col-sm-6">
+                                <input type="email" name="email" class="form-control p-4" placeholder="Your Email" required />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <input type="text" name="subject" class="form-control p-4" placeholder="Subject" required />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="control-group">
+                            <textarea name="message" class="form-control py-3 px-4" rows="5" placeholder="Message" required></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div>
+                            <button class="btn btn-outline-primary" type="submit">Send Message</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Contact End -->
+</div>
+<!-- Contact End -->
+
 
 
     <!-- Footer Start -->
