@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Certification Details | vBordea</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="img/logo.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Add custom CSS -->
+    <style>
+        /* Styling for the certification image */
+        .certification-image {
+            display: block;
+            margin: 30px auto;
+            max-width: 80%; /* Smaller image */
+            border: 5px solid #f0f0f0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Container for the content */
+        .certification-container {
+            max-width: 800px;
+            margin: 30px auto;
+            text-align: center;
+        }
+
+        /* Larger Description */
+        .certification-description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 20px 0;
+            text-align: justify;
+        }
+
+        .certification-header {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Simple Home Button with Bar Start -->
+    <div class="fixed-top bg-light py-2 px-lg-5 border-bottom shadow-sm">
+        <a href="index.html" class="text-primary display-5 ml-lg-3">
+            <h1 class="m-0">vBordea</h1>
+        </a>
+    </div>
+    <!-- Simple Home Button with Bar End -->
+
+    <div class="container mt-5 pt-5 certification-container">
+        <div id="certification-details">
+            <!-- Dynamic content will be injected here -->
+        </div>
+    </div>
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
+        <div class="container text-center py-5">
+            <div class="d-flex justify-content-center mb-4">
+                <a class="btn btn-light btn-social mr-2" href="https://x.com/ValentinBordea6"><i class="fab fa-x-twitter"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="https://www.facebook.com/valentin.bordea.90"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="https://www.linkedin.com/in/bordeavalentin"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-light btn-social" href="https://www.instagram.com/valentinbordea/"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="d-flex justify-content-center mb-3">
+                <a class="text-white" href="privacy.html">Privacy</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="terms.html">Terms</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="faqs.html">FAQs</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="help.html">Help</a>
+            </div>
+            <p class="m-0">&copy; <a class="text-white font-weight-bold" href="index.html">valentinbordea.com</a>. All Rights Reserved.</p>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-outline-dark px-0 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/typed/typed.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Custom Script for Dynamic Content -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const cert = urlParams.get('cert');
+            const certDetails = {
+                bitcoin: {
+                    title: "Introduction to Bitcoin and Open Blockchains Workshop",
+                    image: "img/Introduction_to_Bitcoin.jpg",
+                    description: "This workshop, led by Andreas M. Antonopoulos, provides an in-depth understanding of Bitcoin and open blockchains, covering topics such as Bitcoin's consensus mechanism, transaction processes, and price determination."
+                },
+                cybersecurity: {
+                    title: "Introduction to Cybersecurity",
+                    image: "img/Introduction_to_cybersecurity.jpg",
+                    description: "This course by Cisco Networking Academy offers a comprehensive introduction to cybersecurity. It covers the basic principles of network security, including firewalls, encryption, and other essential security concepts."
+                }
+            };
+
+            if (cert && certDetails[cert]) {
+                const certData = certDetails[cert];
+                const certElement = document.getElementById('certification-details');
+                certElement.innerHTML = `
+                    <img src="${certData.image}" alt="${certData.title}" class="certification-image">
+                    <div class="certification-header">${certData.title}</div>
+                    <p class="certification-description">${certData.description}</p>
+                `;
+            } else {
+                // In case of an invalid or missing "cert" query parameter
+                const certElement = document.getElementById('certification-details');
+                certElement.innerHTML = '<p>Certification not found.</p>';
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Educational Projects | vBordea</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="img/logo.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* Body and HTML styles */
+        body, html {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-content {
+            flex-grow: 1;
+            padding-top: 80px;
+        }
+
+        .project-item {
+            cursor: pointer;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .project-item img {
+            max-width: 300px; /* Adjusted for smaller images */
+            height: auto;
+            border-radius: 10px; /* Rounded corners for the images */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for the image */
+            margin: 0 auto; /* Center the images */
+        }
+
+        .project-item h5 {
+            margin-top: 10px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .project-item p {
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Simple Home Button with Bar Start -->
+    <div class="fixed-top bg-light py-2 px-lg-5 border-bottom shadow-sm">
+        <a href="index.html" class="text-primary display-5 ml-lg-3">
+            <h1 class="m-0">vBordea</h1>
+        </a>
+    </div>
+    <!-- Simple Home Button with Bar End -->
+
+    <!-- Main Content Start -->
+    <div class="container mt-5 pt-5">
+        <h2 class="text-center mb-4">Educational Projects</h2>
+
+        <!-- Project 1: Learn and Play for Kids -->
+        <div class="project-item" onclick="window.location.href='educational-project-detail.html?project=learn_and_play_for_kids';">
+            <img src="img/learn_and_play_for_kids.jpg" alt="Learn and Play for Kids">
+            <h5>Learn and Play for Kids</h5>
+            <p>Bachelor's thesis project for creating educational software for children.</p>
+        </div>
+
+        <!-- Project 2: Image Reconstruction -->
+        <div class="project-item" onclick="window.location.href='educational-project-detail.html?project=image_reconstruction';">
+            <img src="img/image_reconstruction.jpg" alt="Image Reconstruction">
+            <h5>Image Reconstruction in Cybersecurity</h5>
+            <p>Master's thesis focusing on techniques in artificial intelligence for image reconstruction.</p>
+        </div>
+    </div>
+    <!-- Main Content End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
+        <div class="container text-center py-5">
+            <div class="d-flex justify-content-center mb-4">
+                <a class="btn btn-light btn-social mr-2" href="https://x.com/ValentinBordea6"><i class="fab fa-x-twitter"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="https://www.facebook.com/valentin.bordea.90"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="https://www.linkedin.com/in/bordeavalentin"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-light btn-social" href="https://www.instagram.com/valentinbordea/"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="d-flex justify-content-center mb-3">
+                <a class="text-white" href="privacy.html">Privacy</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="terms.html">Terms</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="faqs.html">FAQs</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="help.html">Help</a>
+            </div>
+            <p class="m-0">&copy; <a class="text-white font-weight-bold" href="index.html">valentinbordea.com</a>. All Rights Reserved.</p>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-outline-dark px-0 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Educational Projects JS -->
+    <script src="js/educational-projects.js"></script>
+</body>
+
+</html>

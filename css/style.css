@@ -10052,4 +10052,52 @@ h6,
   }
 }
 
+/* Centering the images */
+.certification-image {
+  display: block;
+  margin: 0 auto;  /* This centers the image horizontally */
+  max-width: 100%;  /* Prevents images from exceeding container width */
+  height: auto;  /* Ensures aspect ratio is maintained */
+}
+
+/* Optional: Style for the certification list container */
+.certification-list {
+  text-align: center;  /* Centers the content */
+  margin: 20px 0;  /* Adds spacing around the images */
+}
+
+/* Center images */
+.certification-image {
+  display: block;
+  margin: 0 auto; /* Centers the image horizontally */
+  max-width: 100%; /* Ensures image doesn't overflow container */
+  height: auto; /* Maintains aspect ratio */
+}
+
+/* Center the text for certification items */
+.certification-item {
+  text-align: center;
+  margin-bottom: 30px; /* Adds space between certifications */
+}
+
+/* Optional: Style for the container */
+.container {
+  text-align: center;
+}
+/* Certification Image Styling */
+.certification-image {
+  display: block;
+  margin: 20px auto;
+  width: 80%; /* Adjust the width as needed */
+  max-width: 400px; /* Limit the maximum size */
+  border: 5px solid #f0f0f0; /* Light border for the frame */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certification-image:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
 
