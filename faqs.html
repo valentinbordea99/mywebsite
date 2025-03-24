@@ -1,42 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQs</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <!-- Header Start -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="privacy.html">Privacy</a></li>
-                <li><a href="terms.html">Terms</a></li>
-                <li><a href="faqs.html">FAQs</a></li>
-                <li><a href="help.html">Help</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!-- Header End -->
 
-    <!-- FAQs Content Start -->
-    <section>
-        <h1>Frequently Asked Questions</h1>
-        <h2>What is your website about?</h2>
-        <p>This website is a personal portfolio showcasing my skills and work in cybersecurity and software development.</p>
-        <h2>How can I contact you?</h2>
-        <p>You can contact me through the contact form on this website.</p>
-        <h2>Do you offer any services?</h2>
-        <p>Yes, I offer cybersecurity consulting and software development services. Please contact me for more details.</p>
-    </section>
-    <!-- FAQs Content End -->
+<head>
+    <meta charset="utf-8">
+    <title>FAQs | vBordea</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="img/logo.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Add custom CSS for sticky navbar and footer -->
+    <style>
+        /* Sticky Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Body and HTML styles */
+        body, html {
+            height: 100%; /* Full height */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-content {
+            flex-grow: 1; /* Make the content take the remaining space */
+            padding-top: 80px; /* Adjust for the fixed navbar height */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Simple Home Button with Bar Start -->
+    <div class="fixed-top bg-light py-2 px-lg-5 border-bottom shadow-sm">
+        <a href="index.html" class="text-primary display-5 ml-lg-3">
+            <h1 class="m-0">vBordea</h1>
+        </a>
+    </div>
+    <!-- Simple Home Button with Bar End -->
+
+    <!-- Page Content Start -->
+    <div class="main-content container mt-5 pt-5" style="padding-top: 100px;">
+        <h2 class="text-center" style="font-size: 2.5rem;">Frequently Asked Questions (FAQs)</h2>
+
+        <h4 class="text-left">1. What services do you offer?</h4>
+        <p class="text-justify">We offer a wide range of services, including:</p>
+        <ul class="text-justify">
+            <li><strong>Maintenance & Repair:</strong> We repair PCs, laptops, and general devices, including hardware fixes, system cleaning, and troubleshooting software issues.</li>
+            <li><strong>App Development:</strong> We develop custom applications, automate processes, and create tailored software solutions to meet your specific needs.</li>
+            <li><strong>Software Installation:</strong> We provide installation and configuration of operating systems and software, ensuring optimal performance and security.</li>
+            <li><strong>Device Optimization:</strong> We optimize the performance of your devices by removing bloatware and adjusting settings for improved speed and efficiency.</li>
+            <li><strong>Network Setup:</strong> We assist in setting up and configuring secure home or office networks, including Wi-Fi optimization and troubleshooting.</li>
+            <li><strong>Data Backup & Recovery:</strong> We securely back up your data and help recover lost or corrupted files on your devices.</li>
+        </ul>
+
+        <h4 class="text-left">2. How can I contact you for a project or service request?</h4>
+        <p class="text-justify">You can reach us through the "Contact Me" section on our website or via email at <a href="mailto:bvl013649@gmail.com">bvl013649@gmail.com</a>. We are happy to discuss your project or service needs and provide tailored solutions.</p>
+
+        <h4 class="text-left">3. How do I know if my device needs repair or optimization?</h4>
+        <p class="text-justify">If your device is slow, facing frequent crashes, or displaying other performance issues, it may need repair or optimization. Contact us, and we will evaluate your device and recommend the appropriate service to improve its performance.</p>
+
+        <h4 class="text-left">4. Do you offer support for software and hardware issues?</h4>
+        <p class="text-justify">Yes, we provide comprehensive support for both software and hardware issues. From troubleshooting software errors to repairing faulty hardware components, we offer solutions to keep your devices running smoothly.</p>
+
+        <h4 class="text-left">5. Can you develop custom applications for my business?</h4>
+        <p class="text-justify">Absolutely! We specialize in developing custom applications designed to meet the unique needs of your business. Whether it's process automation, task management, or software tailored to your operations, we can create solutions that add value to your business.</p>
+
+        <h4 class="text-left">6. How do I ensure my device is secure after installation or optimization?</h4>
+        <p class="text-justify">After we complete any installation or optimization, we ensure your device is secure by configuring appropriate security settings, updating software, and installing any necessary security tools to protect against threats.</p>
+
+        <h4 class="text-left">Contact Us</h4>
+        <p class="text-justify">Email: <a href="mailto:bvl013649@gmail.com">bvl013649@gmail.com</a></p>
+    </div>
+    <!-- Page Content End -->
 
     <!-- Footer Start -->
-    <footer>
-        <p>&copy; 2025 valentinbordea.com. All Rights Reserved.</p>
-    </footer>
+    <div class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
+        <div class="container text-center py-5">
+            <div class="d-flex justify-content-center mb-4">
+                <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="https://www.facebook.com/valentin.bordea.90"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="https://www.linkedin.com/in/bordeavalentin"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-light btn-social" href="https://www.instagram.com/valentinbordea/"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="d-flex justify-content-center mb-3">
+                <a class="text-white" href="privacy.html">Privacy</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="terms.html">Terms</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="faqs.html">FAQs</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="help.html">Help</a>
+            </div>
+            <p class="m-0">&copy; <a class="text-white font-weight-bold" href="index.html">valentinbordea.com</a>. All Rights Reserved.</p>
+        </div>
+    </div>
     <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-outline-dark px-0 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/typed/typed.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+
 </body>
+
 </html>
