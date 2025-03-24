@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Educational Project Details | vBordea</title>
+    <title>Educational Project Detail | vBordea</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <!-- Favicon -->
@@ -33,25 +33,29 @@
             padding-top: 80px;
         }
 
-        .project-item {
-            text-align: center;
-        }
-
-        .project-item img {
-            max-width: 500px;
+        /* Adjust the project image size */
+        .project-detail img {
+            max-width: 100%; /* Ensure it doesn't exceed the width */
             height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for the image */
+            margin: 0 auto; /* Center the image */
+            display: block; /* Make sure the image is a block element */
+            max-height: 500px; /* Set a reasonable height limit */
         }
 
-        .project-item h5 {
-            margin-top: 10px;
-            font-size: 20px;
+        .project-detail h2 {
+            font-size: 28px;
+            text-align: center;
+            margin-top: 20px;
         }
 
-        .project-item p {
-            font-size: 14px;
+        .project-detail p {
+            text-align: justify;
+            font-size: 16px;
             color: #666;
+            line-height: 1.6;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -67,11 +71,10 @@
 
     <!-- Main Content Start -->
     <div class="container mt-5 pt-5">
-        <h2 id="project-title" class="text-center mb-4">Project Title</h2>
-
-        <div class="project-item text-center">
-            <img id="project-image" src="img/default.jpg" alt="Project Image" class="img-fluid rounded">
-            <p id="project-description" class="text-center mt-3">Project description will be displayed here.</p>
+        <div class="project-detail">
+            <h2 id="project-title"></h2>
+            <img id="project-image" src="" alt="Project Image">
+            <p id="project-description"></p>
         </div>
     </div>
     <!-- Main Content End -->
@@ -106,8 +109,8 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Educational Projects JS -->
-    <script src="js/educational-projects.js"></script>
+    <!-- Educational Project Detail JS -->
+    <script src="js/educational-project-detail.js"></script>
 </body>
 
 </html>
