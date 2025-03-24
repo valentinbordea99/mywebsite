@@ -1,43 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <!-- Header Start -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="privacy.html">Privacy</a></li>
-                <li><a href="terms.html">Terms</a></li>
-                <li><a href="faqs.html">FAQs</a></li>
-                <li><a href="help.html">Help</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!-- Header End -->
 
-    <!-- Privacy Policy Content Start -->
-    <section>
-        <h1>Privacy Policy</h1>
-        <p>Your privacy is important to us. This privacy policy explains how we collect, use, and protect your personal data.</p>
-        <h2>Information We Collect</h2>
-        <p>We collect personal information such as your name, email address, and other details you provide when you contact us via our website.</p>
-        <h2>How We Use Your Information</h2>
-        <p>We use your information to respond to your inquiries and improve our services.</p>
-        <h2>Data Protection</h2>
-        <p>We take appropriate measures to protect your personal data from unauthorized access or disclosure.</p>
-    </section>
-    <!-- Privacy Policy Content End -->
+<head>
+    <meta charset="utf-8">
+    <title>Privacy | vBordea</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="img/logo.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Add custom CSS for sticky navbar and footer -->
+    <style>
+        /* Sticky Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Body and HTML styles */
+        body, html {
+            height: 100%; /* Full height */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-content {
+            flex-grow: 1; /* Make the content take the remaining space */
+            padding-top: 80px; /* Adjust for the fixed navbar height */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Simple Home Button with Bar Start -->
+    <div class="fixed-top bg-light py-2 px-lg-5 border-bottom shadow-sm">
+        <a href="index.html" class="text-primary display-5 ml-lg-3">
+            <h1 class="m-0">vBordea</h1>
+        </a>
+    </div>
+    <!-- Simple Home Button with Bar End -->
+
+    <!-- Page Content Start -->
+    <div class="main-content container mt-5 pt-5" style="padding-top: 100px;">
+        <h2 class="text-center">Privacy Policy</h2>
+        <p class="lead">This is where you would explain your privacy policy...</p>
+        <!-- Add the rest of your privacy content here -->
+    </div>
+    <!-- Page Content End -->
 
     <!-- Footer Start -->
-    <footer>
-        <p>&copy; 2025 valentinbordea.com. All Rights Reserved.</p>
-    </footer>
+    <div class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
+        <div class="container text-center py-5">
+            <div class="d-flex justify-content-center mb-4">
+                <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="https://www.facebook.com/valentin.bordea.90"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="https://www.linkedin.com/in/bordeavalentin"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-light btn-social" href="https://www.instagram.com/valentinbordea/"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="d-flex justify-content-center mb-3">
+                <a class="text-white" href="privacy.html">Privacy</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="terms.html">Terms</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="faqs.html">FAQs</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="help.html">Help</a>
+            </div>
+            <p class="m-0">&copy; <a class="text-white font-weight-bold" href="#">valentinbordea.com</a>. All Rights Reserved.</p>
+        </div>
+    </div>
     <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-outline-dark px-0 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/typed/typed.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+
 </body>
+
 </html>
