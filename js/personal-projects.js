@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
     const projectDetails = {
-        "project1": {
-            title: "Project 1",
-            image: "img/project1.jpg",
-            description: "Description for personal project 1."
+        "TikTokGame": {
+            title: "TikTok Interactive Game",
+            image: "img/triviaquizloading.jpg",
+            description: "API-based TikTok Live Trivia Game."
         },
-        "project2": {
-            title: "Project 2",
-            image: "img/project2.jpg",
-            description: "Description for personal project 2."
+        "RFIDsecurity": {
+            title: "RFID Security Project",
+            image: "img/rfid125khz.jpg",
+            description: "Exploring Android NFC for 13.56 MHz RFID card emulation."
         }
     };
 

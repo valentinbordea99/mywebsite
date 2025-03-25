@@ -21,16 +21,15 @@
     <link href="css/style.css" rel="stylesheet">
 
     <style>
-        /* Body and HTML styles */
         body, html {
-            height: 100%; /* Full height */
+            height: 100%;
             display: flex;
             flex-direction: column;
         }
 
         .main-content {
-            flex-grow: 1; /* Make the content take the remaining space */
-            padding-top: 80px; /* Adjust for the fixed navbar height */
+            flex-grow: 1;
+            padding-top: 80px;
         }
 
         .project-detail {
@@ -39,7 +38,7 @@
         }
 
         .project-detail img {
-            max-width: 80%;
+            max-width: 60%; /* Smaller image size */
             height: auto;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -47,16 +46,31 @@
 
         .project-detail h2 {
             margin-top: 20px;
-            font-size: 30px;
+            font-size: 32px;
+            font-weight: 600;
         }
 
         .project-detail p {
             font-size: 18px;
-            color: #666;
-            line-height: 1.6;
+            color: #555;
+            line-height: 1.8;
             margin-top: 20px;
-            padding: 0 15px;
+            padding: 0 20px;
+            text-align: justify; /* Justified text */
         }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #007bff;
+            font-size: 18px;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
     </style>
 </head>
 
@@ -75,6 +89,9 @@
         <h2 id="project-title">Project Title</h2>
         <img id="project-image" src="img/default.jpg" alt="Project Image">
         <p id="project-description">Project description will go here.</p>
+
+        <!-- Link back to educational projects -->
+        <a href="educational-projects.html" class="back-link">← Back to Educational Projects</a>
     </div>
     <!-- Main Content End -->
 
@@ -114,18 +131,31 @@
         const urlParams = new URLSearchParams(window.location.search);
         const project = urlParams.get("project");
 
-        // Data for educational projects (for demo purposes)
+        // Data for educational projects
         const projects = {
-            "learn_and_play_for_kids": {
-                title: "Learn and Play for Kids",
-                image: "img/learn_and_play_for_kids.jpg", // Make sure this path is correct
-                description: "This was my Bachelor's thesis project, where I created an educational software platform designed for children to learn in a fun and interactive manner."
+                "learn_and_play_for_kids": {
+                    title: "Learn and Play for Kids",
+                    image: "img/learn_and_play_for_kids.jpg", 
+                    description: `This bachelor’s thesis presents "Learn and Play for Kids", a mobile app designed to help young children learn through interactive activities and games. The idea for this project came during the COVID-19 pandemic when many kids were unable to attend school or access online classes. The app was developed as a way to support early learning and make up for some of those lost opportunities.
+
+                    Built using Java and Android Studio, the app covers topics like the alphabet, numbers, shapes, music, animals, and sports, using images, sounds, and engaging exercises. It also includes games that reinforce what kids learn, such as guessing animals, matching sounds, and solving simple math problems.
+
+                    By making learning fun and accessible, Learn and Play for Kids offers a helpful alternative for early education, especially in situations where traditional learning isn’t possible.`
             },
+
             "image_reconstruction": {
                 title: "Image Reconstruction in Cybersecurity",
-                image: "img/image_reconstruction.jpg", // Make sure this path is correct
-                description: "This Master's thesis project focused on using artificial intelligence to reconstruct images in the context of cybersecurity."
+                image: "img/image_reconstruction.jpg", 
+                description: `This master’s thesis presents "Image Reconstruction in the Context of Cybersecurity: An Analysis of Techniques Used in Artificial Intelligence", a study on how AI can be used to restore, enhance, and generate images with applications in digital security. The project was highlighting the need for advanced tools to detect and counteract manipulated or corrupted images.
+
+                The research focuses on state-of-the-art AI models, including Generative Adversarial Networks (GANs), Diffusion Models, Variational Autoencoders (VAEs), and Transformer-based models. These techniques were analyzed for their effectiveness in cybersecurity-related tasks such as detecting deepfakes, restoring tampered images, and generating synthetic data for machine learning models.
+
+                The thesis includes a comparative analysis of these models based on key performance metrics, as well as implementation insights and real-world applications. Through this study, the project contributes to the development of AI-based solutions for strengthening digital security and combating image-based cyber threats.
+                
+                Algorithms used: StyleGAN3, Stable Diffusion, VQ-VAE-2, DALL-E.
+                `
             }
+
         };
 
         // Populate project details based on the query

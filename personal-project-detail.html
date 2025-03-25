@@ -109,7 +109,93 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
 
     <!-- Personal Project Detail Script -->
-    <script src="js/personal-projects.js"></script>
+    <script>
+        // Extract project name from URL query parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const project = urlParams.get("project");
+    
+        // Data for personal projects
+        const projects = {
+    "TikTokGame": {
+    title: "TikTok Interactive Game",
+    image: "img/triviaquizloading.jpg", 
+    description: `
+        <p><strong>Personal Project: TikTok Interactive Game</strong></p>
+        <p>In this project, I developed a Python-based interactive game for TikTok Live, leveraging the platform's comment section for real-time user interaction. The primary challenge was creating a game that engaged TikTok's live viewers, without relying on the traditional live video format. Instead of showing myself, I screen-captured a custom game I built in Python, which displayed on the live stream for viewers to interact with.</p>
+
+        <p><strong>Game Concept and Development</strong></p>
+        <p>The game consisted of quiz challenges and image puzzles, where questions or images were displayed on the screen, and players could respond by commenting their answers in the live chat. The idea was to use the TikTok API to capture and process important user data from the comments, such as usernames, profile pictures, and answers. This allowed me to track each player's responses in real-time and create an interactive experience.</p>
+
+        <div class="text-center">
+            <img src="img/triviaquizgamedemo.jpg" alt="TikTok Interactive Game Screenshot" class="img-fluid" style="max-width: 250px;" />
+        </div>
+
+
+        <p><strong>Real-Time Interaction and Ranking System</strong></p>
+        <p>Each comment from viewers was processed to check for the correct answer. The first player to respond with the correct answer was displayed on the screen, showing their profile picture, username, and answer, and awarded points based on their response time. These points contributed to a leaderboard, where the top five players were displayed in real-time, fostering competition and engagement among viewers. The TikTok API played a critical role in capturing the comments and providing essential data to implement the ranking system.</p>
+
+        <p><strong>Challenges and Insights</strong></p>
+        <p>One of the key challenges I faced was obtaining an account with sufficient followers to access the live stream feature, which is a requirement for TikTok Live. Once I overcame this hurdle, I was able to integrate the game's backend with the TikTok Live stream. The game ran smoothly, but it required continuous refinement of the interaction flow and leaderboard system to ensure accurate rankings and a seamless experience for viewers.</p>
+
+        <div class="text-center">
+            <img src="img/triviaquizgamelive.jpg" alt="TikTok Live" class="img-fluid" style="max-width: 500px;" />
+        </div>
+
+        <p>This project showcased the potential of using TikTok’s live streaming platform for interactive game development, combining real-time data processing, user engagement, and a dynamic leaderboard system. It was a rewarding technical experience that highlighted how APIs can enable interactivity within social media platforms, fostering deeper viewer participation and engagement.</p>
+    `
+    },
+
+    "RFIDsecurity": {
+        title: "RFID Security Project",
+        image: "img/rfid125khz.jpg", 
+        description: `
+            <p><strong>Personal Project: RFID Security Project</strong></p>
+            <p>In this project, I explored the feasibility of using an Android smartphone to emulate an RFID card (13.56 MHz) for access control, aiming to replace traditional RFID cards with smartphones, providing a more convenient and secure access solution. My primary focus was on understanding the technical limitations of smartphones, the compatibility of NFC (Near Field Communication) technology with different RFID standards, and how Android's software stack interacts with these systems.</p>
+            
+            <p><strong>Understanding RFID and NFC</strong></p>
+            <p>RFID (Radio Frequency Identification) operates at different frequencies, with 13.56 MHz (High Frequency or HF) and 125 kHz (Low Frequency or LF) being the most common. The RFID technology used in access control typically operates on the 13.56 MHz frequency, which is compatible with NFC-enabled smartphones. However, 125 kHz RFID cards, often used for older access control systems, are not directly supported by smartphones. These 125 kHz cards are usually based on technologies like EM4100, which are passive and do not support advanced encryption or communication protocols that NFC devices use.</p>
+
+            <p><strong>Exploring Android's NFC Capabilities</strong></p>
+            <p>Android smartphones with built-in NFC support operate on the 13.56 MHz frequency and are capable of communicating with various RFID systems, such as MIFARE Classic, MIFARE DESFire, and FeliCa cards. I began by investigating Android's NFC API and the Android HCE (Host Card Emulation) feature, which allows an NFC-enabled device to emulate a smartcard.</p>
+            <p>I enabled NFC on my device and successfully read data from a 13.56 MHz RFID access card. However, the key challenge arose when I attempted to emulate the card for access control. While Android's NFC functionality supports reading and writing data from RFID cards, full emulation (specifically for proprietary protocols used in access control systems) is restricted for security reasons.</p>
+
+            <p><strong>Limitations of NFC Emulation</strong></p>
+            <p>Upon further research, I discovered that Android’s NFC API provides limited capabilities for NFC emulation. While Android supports HCE for emulating contactless payment cards (like credit cards or transit cards), this functionality is mainly designed for secure elements in the device, such as the Trusted Execution Environment (TEE) or Secure Enclave (SE), which are hardware-based and heavily restricted for non-payment applications. Manufacturers and OS developers impose these limitations to prevent unauthorized access and ensure secure transaction environments.</p>
+
+            <p>In contrast, access control systems that use 13.56 MHz RFID cards typically operate on protocols that do not align with Android’s secure NFC emulation framework. For instance, proprietary access control systems use encryption or challenge-response authentication mechanisms that are not easily emulatable through the Android NFC stack. These protocols are designed to be resistant to cloning or unauthorized access.</p>
+
+            <p><strong>The Rooting Consideration</strong></p>
+            <p>To bypass these restrictions, I explored the possibility of rooting my Android device. Rooting would allow me to gain access to low-level system files and potentially modify the NFC software stack to enable full control over the NFC hardware, including card emulation. However, after further consideration, I realized that this approach would introduce several significant issues:</p>
+            <ul>
+                <li><strong>Security Risks:</strong> Rooting a device compromises its security model, leaving it vulnerable to malware, unauthorized access, and data breaches.</li>
+                <li><strong>Legal and Ethical Concerns:</strong> By rooting the device and modifying its NFC stack, I would be violating terms of service agreements with device manufacturers, and the approach could be considered illegal in certain jurisdictions due to its potential for misuse in card cloning and bypassing access controls.</li>
+                <li><strong>Stability Issues:</strong> Rooted devices are prone to system instability, and the changes required to emulate an RFID card at the hardware level would likely lead to unreliable behavior.</li>
+            </ul>
+
+            <p><strong>Conclusion</strong></p>
+            <p>This project revealed that while using smartphones to emulate RFID cards at 13.56 MHz is technically possible, it is not practically feasible for the general public. Android’s NFC framework does allow for reading and writing RFID cards, but full emulation for access control purposes remains limited due to security and protocol constraints. Rooting the device to bypass these limitations introduces significant risks and challenges, making it an impractical solution for everyday users.</p>
+
+            <p>Theoretically, NFC emulation could be extended to support access control systems, but this would introduce serious security concerns. Allowing smartphones to emulate RFID cards for access control could open up the possibility for card cloning and unauthorized access, undermining the security of such systems.</p>
+
+            <p>This project provided valuable insights into the intersection of mobile technology, security, and access control. It also underscored the challenges and trade-offs involved in enabling sophisticated features while maintaining the integrity of security systems.</p>
+        `
+    }
+};
+
+    
+        // Populate project details based on the query
+        if (projects[project]) {
+            document.getElementById("project-title").innerText = projects[project].title;
+            document.getElementById("project-image").src = projects[project].image;
+            document.getElementById("project-image").alt = projects[project].title;
+            // Use innerHTML to render the description with HTML
+            document.getElementById("project-description").innerHTML = projects[project].description;
+        } else {
+            // Handle the case when no valid project is found
+            document.getElementById("project-title").innerText = "Project Not Found";
+            document.getElementById("project-description").innerText = "Sorry, the project you are looking for does not exist.";
+        }
+    </script>
 </body>
 
 </html>

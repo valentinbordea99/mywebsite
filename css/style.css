@@ -10101,3 +10101,24 @@ h6,
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
 
+.project-description {
+  text-align: justify;
+  margin: 0 auto;
+  padding: 20px;  /* Optional: Adjust the padding if needed */
+  line-height: 1.6; /* Optional: Adjust line height for readability */
+}
+
+.project-detail p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.8;
+  margin-top: 20px;
+  padding: 0 20px;
+  text-align: justify;
+  word-spacing: 0.5px;  /* Adjust word spacing */
+  hyphens: auto;        /* Enable hyphenation */
+  overflow-wrap: break-word;  /* Ensure long words break properly */
+  max-width: 800px;     /* Limit paragraph width */
+  margin-left: auto;
+  margin-right: auto;
+}

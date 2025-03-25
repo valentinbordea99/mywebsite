@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
     const projectDetails = {
         "learn_and_play_for_kids": {
-            title: "Learn and Play for Kids",
+            title: "Bachelor’s Thesis Project",
             image: "img/learn_and_play_for_kids.jpg",
-            description: "Bachelor's thesis project for creating educational software for children."
+            description: "Bachelor’s thesis project on developing an educational mobile app for children, integrating learning and interactive games."
         },
         "image_reconstruction": {
-            title: "Image Reconstruction in Cybersecurity",
+            title: "Master’s Thesis Project",
             image: "img/image_reconstruction.jpg",
-            description: "Master's thesis focusing on techniques in artificial intelligence for image reconstruction."
+            description: "Master’s thesis project on AI-driven image reconstruction techniques and their applications in cybersecurity."
         }
     };
 
