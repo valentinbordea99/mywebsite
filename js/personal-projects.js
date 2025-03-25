@@ -18,11 +18,9 @@ document.addEventListener("DOMContentLoaded", function() {
     if (projectDetails[projectId]) {
         const project = projectDetails[projectId];
         document.getElementById('project-title').textContent = project.title;
-        document.getElementById('project-image').src = project.image;
         document.getElementById('project-description').textContent = project.description;
     } else {
         document.getElementById('project-title').textContent = "Project Not Found";
-        document.getElementById('project-image').src = "img/default.jpg";
         document.getElementById('project-description').textContent = "Sorry, the project you're looking for doesn't exist.";
     }
 });

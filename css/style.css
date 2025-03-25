@@ -10122,3 +10122,29 @@ h6,
   margin-left: auto;
   margin-right: auto;
 }
+
+/* General styles */
+.project-detail {
+  margin-top: 50px;
+  text-align: justify;  /* Justify the text on larger screens */
+}
+
+.project-detail img {
+  max-width: 100%;  /* Make image scale down to container width */
+  height: auto;     /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image fits inside the container */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;  /* Center images horizontally */
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) { /* For devices with screen width 767px or less (usually phones) */
+  .project-detail {
+      text-align: left; /* Align text to the left on smaller screens */
+  }
+  .project-detail img {
+      max-width: 90%;  /* Limit the image width on mobile screens */
+  }
+}
+
