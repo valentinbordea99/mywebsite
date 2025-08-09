@@ -1,0 +1,18 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore node modules if using npm
+node_modules/
+
+# Ignore build and cache folders
+dist/
+build/
+.cache/
+
+# Ignore compiled CSS if using SCSS (keep only source in repo if desired)
+*.css.map
+
+# Ignore temporary files
+*.log
+*.tmp
