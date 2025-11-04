@@ -10151,18 +10151,31 @@ h6,
 #home {
   position: relative;
   overflow: hidden;
-  background: url("assets/img/header-bg.jpg") center/cover no-repeat;
+  background: url("../img/background-image.jpg") center/cover no-repeat; /* adjust path relative to style.css */
+  min-height: 100vh; /* keep full viewport height */
 }
+
+/* Optional: overlay if you want darkened effect */
 #home::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.4); /* dark transparent overlay */
+  background: rgba(0, 0, 0, 0.4); /* semi-transparent overlay */
   z-index: 1;
 }
+
 #home > .container {
   position: relative;
-  z-index: 2; /* keep content above ripples */
+  z-index: 2; /* ensures content stays above overlay */
 }
 
+#profile-photo {
+  width: 350px !important;
+  height: 350px !important;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
 

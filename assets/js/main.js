@@ -118,10 +118,11 @@
     $(function(){
     $('#home').ripples({
         resolution: 512,
-        dropRadius: 15,
+        dropRadius: 16,
         perturbance: 0.01
     });
     });
+
 
     
 })(jQuery);
