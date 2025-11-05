@@ -49,15 +49,17 @@
     </nav>
     <!-- Navbar End -->
 
-
     <!-- Header Start -->
     <div class="container-fluid bg-primary d-flex align-items-center mb-5 py-5" id="home" style="min-height: 100vh;">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-5 px-5 pl-lg-0 pb-5 pb-lg-0">
-                    <img class="img-fluid w-100 rounded-circle shadow-sm" id="profile-photo" src="assets/img/profile.png" alt="">
+                    <!-- wrapper ensures a perfect circle and preserves the border -->
+                    <div class="profile-circle">
+                      <img id="profile-photo" src="assets/img/profile.png" alt="Avatar">
+                    </div>
                 </div>
-                    <div class="col-lg-7 text-center text-lg-left">
+                <div class="col-lg-7 text-center text-lg-left">
                     <h3 class="text-white font-weight-normal mb-3">I'm</h3>
                     <h1 class="display-3 text-uppercase mb-2" 
                         style="-webkit-text-stroke: 1px #ffffff; line-height: 0.9;">
@@ -72,7 +74,6 @@
         </div>
     </div>
     <!-- Header End -->
-
 
     <!-- About Start -->
     <div class="container-fluid py-5" id="about">

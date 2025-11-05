@@ -10155,27 +10155,125 @@ h6,
   min-height: 100vh; /* keep full viewport height */
 }
 
-/* Optional: overlay if you want darkened effect */
-#home::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4); /* semi-transparent overlay */
-  z-index: 1;
-}
-
 #home > .container {
   position: relative;
   z-index: 2; /* ensures content stays above overlay */
 }
 
 #profile-photo {
-  width: 350px !important;
-  height: 350px !important;
+  width: 350px;
+  height: 350px;
+  max-width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   border: 5px solid #fff;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   object-fit: cover;
+  display: block;
+  margin: 0 auto;
 }
+
+@media (max-width: 600px) {
+  #profile-photo {
+    width: 60vw;
+    height: 60vw;
+  }
+}
+
+/* === Reset / safe defaults === */
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: #0d6efd; /* fallback same as Bootstrap primary to avoid white edges */
+}
+
+/* === #home: full-bleed reliable background on mobile === */
+/* overrides inline style min-height and ensures no white line on mobile when chrome UI changes */
+#home {
+  position: relative;
+  overflow: hidden;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-color: var(--bs-primary, #0d6efd) !important; /* fallback if no image */
+  min-height: 100dvh !important; /* use dynamic viewport height to avoid white lines on mobile */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+/* ensure parent containers don't introduce white strips */
+#home .container,
+#home .row {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* === Perfect circular avatar wrapper === */
+/* High specificity to override bootstrap .rounded-circle and .img-fluid */
+.profile-circle {
+  width: 100%;                 /* fill column width */
+  max-width: 350px;            /* desktop target size */
+  aspect-ratio: 1 / 1;         /* keep square container */
+  border-radius: 50%;          /* perfect circle */
+  overflow: hidden;            /* crop image to circle */
+  border: 5px solid #fff;      /* keep border */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  display: block;
+  margin: 0 auto;
+  background-color: #eee;      /* placeholder while image loads */
+  -webkit-transform: translateZ(0); /* improve rendering on some mobile browsers */
+}
+
+/* internal image fills wrapper exactly */
+.profile-circle img#profile-photo,
+#profile-photo {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;   /* crop to fill without distortion */
+  display: block !important;
+  border-radius: 0 !important;    /* wrapper handles rounding */
+  max-width: none !important;     /* override img-fluid w-100 */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: none !important;
+}
+
+/* override Bootstrap .w-100 / .img-fluid if present on the image element */
+img#profile-photo.w-100,
+img#profile-photo.img-fluid {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* fine-tune sizing on small screens */
+@media (max-width: 768px) {
+  .profile-circle {
+    max-width: 220px;   /* smaller max on tablets/phones */
+    width: clamp(120px, 56vw, 220px);
+  }
+}
+
+/* extra small phones */
+@media (max-width: 420px) {
+  .profile-circle {
+    width: 56vw;
+    max-width: none;
+  }
+}
+
+/* defensive: remove any background-attachment fixed that might create artifacts */
+#home[style*="background-attachment: fixed"],
+#home {
+  background-attachment: scroll !important;
+}
+
+/* If you use a background image on #home set it in CSS (preferred).
+   Example (uncomment and set your correct path):
+#home {
+  background-image: url("assets/img/background-image.jpg") !important;
+}
+*/
+
+
 
