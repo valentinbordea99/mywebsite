@@ -10274,6 +10274,18 @@ img#profile-photo.img-fluid {
   background-image: url("assets/img/background-image.jpg") !important;
 }
 */
+/* reset without forcing blue site-wide */
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: #ffffff; /* page default white */
+}
+
+/* keep #home using primary/fallback only for the header */
+#home {
+  background-color: var(--bs-primary, #0d6efd) !important;
+  /* other #home rules stay as provided earlier */
+}
 
 
 
